@@ -1,0 +1,266 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.face {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  background: #dab19b;
+  border-radius: 100px 100px 100% 100%;
+}
+
+.eye {
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background: white;
+  top: 60px;
+  left: 15px;
+  border-radius: 50%;
+}
+.eye::before {
+  content: "";
+  width: 26px;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border-top: 1px solid black;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -7px;
+}
+.eye::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-radius: 50%;
+  background: black;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.eye2 {
+  left: initial;
+  right: 15px;
+}
+
+.mouth {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  border-radius: 50%;
+  border-bottom: 4px solid black;
+  left: 50%;
+  top: 110px;
+  transform: translatex(-50%);
+}
+
+.nose {
+  position: absolute;
+  border: 2px solid black;
+  width: 5px;
+  height: 25px;
+  left: 50%;
+  top: 75px;
+  transform: translatex(-50%);
+  clip-path: polygon(25% 0%, 31% 0, 18% 96%, 62% 96%, 61% 100%, 12% 100%);
+}
+
+.ear {
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  background: #dab19b;
+  border-radius: 8px 0 0 8px;
+  top: 60px;
+  left: -10px;
+}
+.ear2 {
+  transform: scaleX(-1);
+  left: initial;
+  right: -10px;
+}
+
+.neck {
+  z-index: -1;
+  width: 30px;
+  height: 50px;
+  background: #dab19b;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 0 0 15px white;
+}
+.body {
+  z-index: -2;
+  width: 200px;
+  height: 170px;
+  background: #e5b863;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+}
+.cape {
+  position: absolute;
+  width: 220px;
+  height: 400px;
+  background: rgba(128, 128, 128, 0.5);
+  z-index: -5;
+  top: 135px;
+  border-radius: 70px 70px 10px 10px;
+}
+.zip {
+  width: 15px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 7.5px 7.5px;
+}
+.hook {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px 5px 50% 50%;
+  background: white;
+  position: absolute;
+  left: 18px;
+  top: -10px;
+  transform: rotate(-20deg);
+}
+.hook::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.hook2 {
+  left: initial;
+  right: 18px;
+  transform: rotate(20deg);
+}
+.hand {
+  width: 40px;
+  height: 200px;
+  background: #e5b863;
+  position: absolute;
+  z-index: -1;
+  left: -5px;
+  border-radius: 60px 0 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.hand2 {
+  border-radius: 0 60px 0 0;
+  left: initial;
+  right: -5px;
+}
+.arm {
+  width: 50px;
+  height: 100px;
+  background: #c2422a;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  clip-path: polygon(0 1%, 100% 0, 100% 100%, 21% 100%);
+}
+.arm2 {
+  left: 0;
+  right: initial;
+  clip-path: polygon(0 1%, 100% 0, 79% 100%, 0% 100%);
+}
+.wrist {
+  height: 50px;
+  width: 50px;
+  background: #c2422a;
+  position: absolute;
+  right: 0;
+  bottom: -59px;
+  clip-path: polygon(21% 0, 100% 0, 100% 100%, 57% 100%, 0 36%);
+}
+
+.wrist2 {
+  transform: scaleX(-1);
+  right: initial;
+}
+
+.belt {
+  width: 128px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.belt::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #ffd700;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.legs {
+  display: flex;
+  position: relative;
+}
+
+.leg {
+  z-index: -1;
+  width: 65px;
+  height: 150px;
+  background: #e5b863;
+  position: relative;
+}
+.leg2 {
+  transform: scaleX(-1);
+}
+
+.shoeTop {
+  position: absolute;
+  width: 70px;
+  height: 90px;
+  background: #c2422a;
+  bottom: -70px;
+  right: 0;
+  clip-path: polygon(0 1%, 100% 0, 100% 100%, 10% 100%);
+}
+
+.shoe {
+  width: 100px;
+  transform: rotate(-10deg);
+  height: 50px;
+  background: #c2422a;
+  position: absolute;
+  bottom: -110px;
+  right: 0;
+  border-radius: 90px 0 10px 40px;
+}
+.divider {
+  position: absolute;
+  width: 8px;
+  height: 200px;
+  background: white;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: -1;
+  top: 40px;
+}
